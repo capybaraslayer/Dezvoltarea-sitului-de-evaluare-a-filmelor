@@ -1,0 +1,13 @@
+{
+	"folders": [
+		{
+			"path": "D:/RC-241/website-project"
+		},
+		{
+			"path": "."
+		}
+	],
+	"settings": {
+		"liveServer.settings.multiRootWorkspaceName": "Site"
+	}
+}

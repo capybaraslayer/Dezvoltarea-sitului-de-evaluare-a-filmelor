@@ -1,14 +1,101 @@
+<!-- index.html -->
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-<script src="abc.js"></script>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>eLearning CUTM - Home</title>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&display=swap" rel="stylesheet">
+  <style>
+    body { font-family: 'Inter', sans-serif; margin: 0; padding: 0; background: #fff; scroll-behavior: smooth; }
+    header, footer { background: #f8f8f8; padding: 20px; text-align: center; }
+    nav { display: flex; justify-content: space-between; align-items: center; padding: 10px 20px; background: #fff; border-bottom: 1px solid #ddd; position: sticky; top: 0; z-index: 1000; }
+    nav a { margin: 0 10px; text-decoration: none; color: #000; font-weight: 600; transition: color 0.3s; }
+    nav a:hover { color: orange; }
+    .hero { background: linear-gradient(to right, #fde68a, #c7f9cc); padding: 50px 20px; display: flex; align-items: center; justify-content: space-around; }
+    .hero-text { max-width: 500px; animation: fadeIn 1s ease-in-out; }
+    .hero-text h1 { font-size: 2.5em; margin: 0; }
+    .hero-text p { margin: 15px 0; color: #555; }
+    .hero-text button { padding: 10px 20px; background: orange; color: white; border: none; border-radius: 5px; cursor: pointer; transition: background 0.3s; }
+    .hero-text button:hover { background: darkorange; }
+    .categories { padding: 40px 20px; }
+    .categories h2 { margin-bottom: 20px; text-align: center; }
+    .grid { display: grid; grid-template-columns: repeat(5, 1fr); gap: 20px; max-width: 1200px; margin: auto; }
+    .card { background: #fff; padding: 20px; border: 1px solid #eee; text-align: center; border-radius: 10px; transition: transform 0.3s, box-shadow 0.3s; }
+    .card:hover { transform: translateY(-5px); box-shadow: 0 4px 10px rgba(0,0,0,0.1); }
+    .card span { font-size: 2em; display: block; margin-bottom: 10px; }
+    @keyframes fadeIn {
+      from { opacity: 0; transform: translateY(20px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+    footer { display: flex; justify-content: space-around; flex-wrap: wrap; text-align: left; padding: 40px 20px; background: #f8f8f8; }
+    footer div { margin: 10px; max-width: 250px; }
+    footer ul { list-style: none; padding: 0; }
+    footer li { margin-bottom: 5px; }
+    footer p, footer li { font-size: 14px; color: #444; }
+  </style>
 </head>
 <body>
-    <a href="#" class="btn">
-        <h1>salut</h1>  
-    </a>
+  <nav>
+    <div><strong>eLearning CUTM</strong></div>
+    <div>
+      <a href="index.html">Home</a>
+      <a href="courses.html">Courses</a>
+      <a href="#footer">Contact</a>
+    </div>
+  </nav>
+  <section class="hero">
+    <div class="hero-text">
+      <h1>Build Skills With Online Course</h1>
+      <p>We denounce with righteous indignation and dislike men who are so beguiled and demoralized that cannot trouble.</p>
+      <button>Post Comment</button>
+    </div>
+    <img src="https://via.placeholder.com/300x400" alt="Student Image">
+  </section>
+  <section class="categories">
+    <h2>Top Categories</h2>
+    <div class="grid">
+      <div class="card"><span>🎨</span>Art & Design<br><small>38 Courses</small></div>
+      <div class="card"><span>💻</span>Development<br><small>38 Courses</small></div>
+      <div class="card"><span>🗣️</span>Communication<br><small>38 Courses</small></div>
+      <div class="card"><span>🎥</span>Videography<br><small>38 Courses</small></div>
+      <div class="card"><span>📷</span>Photography<br><small>38 Courses</small></div>
+      <div class="card"><span>📈</span>Marketing<br><small>38 Courses</small></div>
+      <div class="card"><span>📝</span>Content Writing<br><small>38 Courses</small></div>
+      <div class="card"><span>💰</span>Finance<br><small>38 Courses</small></div>
+      <div class="card"><span>🔬</span>Science<br><small>38 Courses</small></div>
+      <div class="card"><span>🌐</span>Network<br><small>38 Courses</small></div>
+    </div>
+  </section>
+  <footer class="footer" id="footer">
+    <div>
+      <strong>eLearning CUTM</strong>
+      <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+    </div>
+    <div>
+      <h4>GET HELP</h4>
+      <ul>
+        <li>Contact Us</li>
+        <li>Latest Articles</li>
+        <li>FAQ</li>
+      </ul>
+    </div>
+    <div>
+      <h4>PROGRAMS</h4>
+      <ul>
+        <li>Art & Design</li>
+        <li>Business</li>
+        <li>IT & Software</li>
+        <li>Languages</li>
+        <li>Programming</li>
+      </ul>
+    </div>
+    <div>
+      <h4>CONTACT US</h4>
+      <p>Address: 2321 New Design Str, Lorem Ipsum10 Hudson Yards, USA</p>
+      <p>Tel: + (123) 2500-567-8988</p>
+      <p>Mail: supportlms@gmail.com</p>
+    </div>
+  </footer>
 </body>
 </html>

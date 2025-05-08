@@ -1,0 +1,129 @@
+<!-- courses.html -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>All Courses - eLearning CUTM</title>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&display=swap" rel="stylesheet">
+  <style>
+    body { font-family: 'Inter', sans-serif; margin: 0; padding: 0; background: #fff; }
+    nav { display: flex; justify-content: space-between; align-items: center; padding: 10px 20px; background: #fff; border-bottom: 1px solid #ddd; }
+    nav a { margin: 0 10px; text-decoration: none; color: #000; font-weight: 600; }
+    nav a:hover { color: orange; }
+    .container { display: flex; padding: 40px 20px; gap: 30px; }
+    .sidebar { flex: 1; max-width: 250px; border-right: 1px solid #ddd; padding-right: 20px; }
+    .sidebar h4 { margin-bottom: 10px; color: #333; }
+    .sidebar label { display: block; margin: 5px 0; color: #555; }
+    .courses { flex: 3; display: flex; flex-direction: column; gap: 20px; }
+    .course-card { display: flex; border: 1px solid #eee; border-radius: 10px; overflow: hidden; box-shadow: 0 2px 5px rgba(0,0,0,0.05); }
+    .course-img { width: 200px; object-fit: cover; }
+    .course-content { padding: 20px; flex: 1; }
+    .course-content h3 { margin: 0 0 10px; font-size: 18px; }
+    .course-content p { margin: 5px 0; color: #666; font-size: 14px; }
+    .course-meta { font-size: 13px; color: #999; margin: 10px 0; }
+    .course-price { color: green; font-weight: bold; }
+    footer { display: flex; justify-content: space-around; flex-wrap: wrap; text-align: left; padding: 40px 20px; background: #f8f8f8; }
+    footer div { margin: 10px; max-width: 250px; }
+    footer ul { list-style: none; padding: 0; }
+    footer li { margin-bottom: 5px; }
+    footer p, footer li { font-size: 14px; color: #444; }
+  </style>
+</head>
+<body>
+  <nav>
+    <div><strong>eLearning CUTM</strong></div>
+    <div>
+      <a href="index.html">Home</a>
+      <a href="courses.html">Courses</a>
+      <a href="#footer">Contact</a>
+    </div>
+  </nav>
+  <div class="container">
+    <aside class="sidebar">
+      <h4>Course Category</h4>
+      <label><input type="checkbox"> Commercial</label>
+      <label><input type="checkbox"> Office</label>
+      <label><input type="checkbox"> Studio</label>
+      <label><input type="checkbox"> IT & Software</label>
+      <label><input type="checkbox"> Design</label>
+      <label><input type="checkbox"> Academy</label>
+      <label><input type="checkbox"> Story telling home</label>
+
+      <h4>Instructors</h4>
+      <label><input type="checkbox"> Cherry White</label>
+      <label><input type="checkbox"> Djo Doe</label>
+      <label><input type="checkbox"> Pink Man</label>
+      <label><input type="checkbox"> Alix</label>
+
+      <h4>Review</h4>
+      <label><input type="checkbox"> ★★★★★</label>
+      <label><input type="checkbox"> ★★★★☆</label>
+      <label><input type="checkbox"> ★★★☆☆</label>
+      <label><input type="checkbox"> ★★☆☆☆</label>
+
+      <h4>Level</h4>
+      <label><input type="checkbox"> All level</label>
+      <label><input type="checkbox"> Beginner</label>
+      <label><input type="checkbox"> Intermediate</label>
+      <label><input type="checkbox"> Expert</label>
+    </aside>
+    <main class="courses">
+      <div class="course-card">
+        <img src="https://via.placeholder.com/200x120" class="course-img" alt="Course">
+        <div class="course-content">
+          <h3>Create An LMS Website With LearnPress</h3>
+          <div class="course-meta">2 Weeks · 50 Students · All levels · 30 Lessons</div>
+          <p class="course-price">$170 / Free</p>
+        </div>
+      </div>
+      <div class="course-card">
+        <img src="https://via.placeholder.com/200x120" class="course-img" alt="Course">
+        <div class="course-content">
+          <h3>Create An LMS Website With LearnPress</h3>
+          <div class="course-meta">2 Weeks · 50 Students · All levels · 30 Lessons</div>
+          <p class="course-price">$170 / Free</p>
+        </div>
+      </div>
+      <div class="course-card">
+        <img src="https://via.placeholder.com/200x120" class="course-img" alt="Course">
+        <div class="course-content">
+          <h3>Create An LMS Website With LearnPress</h3>
+          <div class="course-meta">2 Weeks · 50 Students · All levels · 30 Lessons</div>
+          <p class="course-price">$170 / Free</p>
+        </div>
+      </div>
+    </main>
+  </div>
+  <footer class="footer" id="footer">
+    <div>
+      <strong>eLearning CUTM</strong>
+      <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+    </div>
+    <div>
+      <h4>GET HELP</h4>
+      <ul>
+        <li>Contact Us</li>
+        <li>Latest Articles</li>
+        <li>FAQ</li>
+      </ul>
+    </div>
+    <div>
+      <h4>PROGRAMS</h4>
+      <ul>
+        <li>Art & Design</li>
+        <li>Business</li>
+        <li>IT & Software</li>
+        <li>Languages</li>
+        <li>Programming</li>
+      </ul>
+    </div>
+    <div>
+      <h4>CONTACT US</h4>
+      <p>Address: 2321 New Design Str, Lorem Ipsum10 Hudson Yards, USA</p>
+      <p>Tel: + (123) 2500-567-8988</p>
+      <p>Mail: supportlms@gmail.com</p>
+    </div>
+  </footer>
+</body>
+</html>
