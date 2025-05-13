@@ -1,0 +1,117 @@
+#navbar nav {
+  background-color: #333;
+  padding: 10px;
+}
+#navbar ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+}
+#navbar ul li {
+  display: inline;
+  margin-right: 20px;
+}
+#navbar ul li a {
+  color: white;
+  text-decoration: none;
+}
+#navbar ul li a:hover {
+  color: #ffcc00;
+}
+.form-container {
+  margin: 50px auto;
+  width: 300px;
+  padding: 20px;
+  background-color: #f4f4f4;
+  border-radius: 8px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+.form-container input {
+  width: 100%;
+  padding: 10px;
+  margin: 10px 0;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+}
+.form-container button {
+  width: 100%;
+  padding: 10px;
+  background-color: #4CAF50;
+  color: white;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+.form-container button:hover {
+  background-color: #45a049;
+}
+footer {
+  background-color: #333;
+  color: white;
+  text-align: center;
+  padding: 20px;
+  position: fixed;
+  bottom: 0;
+  width: 100%;
+}
+body {
+  font-family: Arial, sans-serif;
+  background-image: url('https://www.divahair.ro/images/speciale/articole/articole_imagini/roxana.ruscior_184/2017.03.03/filme%20la%20care%20pl%C3%A2ngi%20femei%20se%20uita%20la%20tv.jpg'); /* Schimbă calea cu locația reală a imaginii tale */
+  background-size: cover;  /* Ajustează imaginea pentru a acoperi întregul ecran */
+  background-position: center center; /* Centrează imaginea */
+  background-attachment: fixed; /* Menține imaginea fixă la derulare */
+  color: white; /* Schimbă culoarea textului pentru a fi vizibil pe fundal întunecat */
+  margin: 0;
+  padding: 0;
+}
+.form-container {
+  max-width: 400px;
+  margin: 80px auto;
+  padding: 30px;
+  background-color: rgba(200, 200, 200, 0.95); /* boxa gri deschisă, opacă */
+  border-radius: 12px;
+  box-shadow: 0 0 20px rgba(0,0,0,0.3);
+  color: #000;
+}
+
+.form-container h2 {
+  text-align: center;
+  margin-bottom: 20px;
+  color: #333;
+}
+
+.form-container input,
+.form-container button {
+  width: 100%;
+  padding: 12px;
+  margin: 10px 0;
+  border: 1px solid #ccc;
+  border-radius: 6px;
+  box-sizing: border-box;
+}
+
+.form-container button {
+  background-color: #28a745;
+  color: white;
+  font-weight: bold;
+  border: none;
+  cursor: pointer;
+}
+
+.form-container button:hover {
+  background-color: #218838;
+}
+
+.form-container p {
+  text-align: center;
+  color: #333;
+}
+
+.form-container a {
+  color: #007bff;
+  text-decoration: none;
+}
+
+.form-container a:hover {
+  text-decoration: underline;
+}

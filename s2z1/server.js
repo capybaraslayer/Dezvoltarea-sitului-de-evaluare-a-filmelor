@@ -1,76 +1,46 @@
-// server.js
 const express = require('express');
 const bodyParser = require('body-parser');
-const session = require('express-session');
-const fs = require('fs');
-const path = require('path');
-
+const mongoose = require('mongoose');
 const app = express();
-const PORT = 3000;
-const USERS_FILE = './users.json';
+const port = 3000;
 
-app.use(bodyParser.urlencoded({ extended: false }));
-app.use(session({
-  secret: 'secret-key',
-  resave: false,
-  saveUninitialized: true
-}));
+// Middleware pentru a parsa corpul cererilor
+app.use(bodyParser.urlencoded({ extended: true }));
+app.use(bodyParser.json());
+
+// Servește fișiere statice (HTML, CSS)
 app.use(express.static('public'));
 
-function loadUsers() {
-  if (!fs.existsSync(USERS_FILE)) fs.writeFileSync(USERS_FILE, '[]');
-  return JSON.parse(fs.readFileSync(USERS_FILE));
-}
+// Conectare la MongoDB
+mongoose.connect('mongodb://localhost:27017/myapp', { useNewUrlParser: true, useUnifiedTopology: true });
 
-function saveUsers(users) {
-  fs.writeFileSync(USERS_FILE, JSON.stringify(users, null, 2));
-}
+// Definirea unui model pentru utilizator
+const userSchema = new mongoose.Schema({
+  username: String,
+  email: String,
+  phone: String,
+  password: String,
+});
+const User = mongoose.model('User', userSchema);
 
-app.post('/register', (req, res) => {
+// Ruta de înregistrare (POST)
+app.post('/register', async (req, res) => {
   const { username, email, phone, password } = req.body;
-  const users = loadUsers();
 
-  if (users.find(u => u.username === username)) {
-    return res.send('Utilizatorul există deja. <a href="register.html">Înapoi</a>');
+  // Validarea datelor
+  if (!username || !email || !phone || !password) {
+    return res.status(400).send('Toate câmpurile sunt obligatorii!');
   }
 
-  users.push({ username, email, phone, password });
-  saveUsers(users);
+  // Crearea unui nou utilizator
+  const user = new User({ username, email, phone, password });
+  await user.save();
+
+  // Redirecționare către pagina de login
   res.redirect('/login.html');
 });
 
-app.post('/login', (req, res) => {
-  const { username, password } = req.body;
-  const users = loadUsers();
-  const user = users.find(u => u.username === username && u.password === password);
-
-  if (!user) {
-    return res.send('Date greșite. <a href="login.html">Încearcă din nou</a>');
-  }
-
-  req.session.user = user;
-  res.redirect('/dashboard');
-});
-
-app.get('/dashboard', (req, res) => {
-  if (!req.session.user) return res.redirect('/login.html');
-
-  const user = req.session.user;
-
-  res.send(`
-    <h2>Bine ai venit, ${user.username}!</h2>
-    <p>Email: ${user.email}</p>
-    <p>Telefon: ${user.phone}</p>
-    <a href="/logout">Logout</a>
-  `);
-});
-
-app.get('/logout', (req, res) => {
-  req.session.destroy(() => {
-    res.redirect('/login.html');
-  });
-});
-
-app.listen(PORT, () => {
-  console.log(`Serverul rulează la http://localhost:${PORT}`);
+// Lansează serverul
+app.listen(port, () => {
+  console.log(`Serverul rulează pe http://localhost:${port}`);
 });

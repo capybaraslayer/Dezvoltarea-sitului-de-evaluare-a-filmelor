@@ -1,0 +1,118 @@
+body {
+  font-family: Arial, sans-serif;
+  background-image: url('https://www.divahair.ro/images/speciale/articole/articole_imagini/roxana.ruscior_184/2017.03.03/filme%20la%20care%20pl%C3%A2ngi%20femei%20se%20uita%20la%20tv.jpg');
+  background-position: center center; /* Centrează imaginea */
+  background-attachment: fixed; /* Menține imaginea fixă la derulare */
+  color: white; /* Schimbă culoarea textului pentru a fi vizibil pe fundal întunecat */
+  margin: 0;
+  padding: 0;
+}
+
+#navbar nav {
+  background-color: #333;
+  padding: 10px;
+}
+#navbar ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+}
+#navbar ul li {
+  display: inline;
+  margin-right: 20px;
+}
+#navbar ul li a {
+  color: white;
+  text-decoration: none;
+}
+#navbar ul li a:hover {
+  color: #ffcc00;
+}
+.main-content {
+  text-align: center;
+  margin-top: 60px;
+  padding: 20px;
+}
+.main-content h1 {
+  font-size: 2.5em;
+  margin-bottom: 10px;
+}
+.main-content p {
+  font-size: 1.2em;
+  margin-bottom: 20px;
+}
+.cta-button {
+  display: inline-block;
+  padding: 10px 20px;
+  background-color: #28a745;
+  color: white;
+  text-decoration: none;
+  border-radius: 5px;
+  font-weight: bold;
+}
+.cta-button:hover {
+  background-color: #218838;
+}
+footer {
+  background-color: #333;
+  color: white;
+  text-align: center;
+  padding: 20px;
+  position: fixed;
+  bottom: 0;
+  width: 100%;
+}
+footer p {
+  margin: 5px 0;
+}
+.form-container {
+  max-width: 400px;
+  margin: 80px auto;
+  padding: 30px;
+  background-color: rgba(200, 200, 200, 0.95); /* boxa gri deschisă, opacă */
+  border-radius: 12px;
+  box-shadow: 0 0 20px rgba(0,0,0,0.3);
+  color: #000;
+}
+
+.form-container h2 {
+  text-align: center;
+  margin-bottom: 20px;
+  color: #333;
+}
+
+.form-container input,
+.form-container button {
+  width: 100%;
+  padding: 12px;
+  margin: 10px 0;
+  border: 1px solid #ccc;
+  border-radius: 6px;
+  box-sizing: border-box;
+}
+
+.form-container button {
+  background-color: #28a745;
+  color: white;
+  font-weight: bold;
+  border: none;
+  cursor: pointer;
+}
+
+.form-container button:hover {
+  background-color: #218838;
+}
+
+.form-container p {
+  text-align: center;
+  color: #333;
+}
+
+.form-container a {
+  color: #007bff;
+  text-decoration: none;
+}
+
+.form-container a:hover {
+  text-decoration: underline;
+}
