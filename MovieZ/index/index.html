@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="ro">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="MovieZ - Explorează cele mai bune filme, recomandări și descărcări de rezumate.">
+  <title>MovieZ | Pagina Principală</title>
+  <link rel="stylesheet" href="../css/style.css">
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@600&family=Roboto:wght@400&display=swap" rel="stylesheet">
+</head>
+<body>
+
+  <!-- Navbar -->
+  <nav class="navbar">
+    <div class="logo">MovieZ</div>
+    <ul class="nav-links">
+      <li><a href="#" class="active">Home</a></li>
+      <li><a href="../top10/top10.html">Top 10 Filme</a></li>
+      <li><a href="../genres/genre.html">Tipuri de Filme</a></li>
+      <li><a href="../despre/despre.html">Despre</a></li>
+    </ul>
+  </nav>
+
+  <!-- Home Section -->
+  <section class="home-section" id="home">
+    <div class="home-text">
+      <h2>Bine ai venit la MovieZ!</h2>
+      <p>Explorați cele mai populare filme, aflați detalii interesante și descărcați rezumatele filmelor. MovieZ este platforma ideală pentru pasionații de cinema.</p>
+      <a href="../top10/top10.html">Vezi Top 10 Filme</a>
+    </div>
+    <div class="home-image">
+      <img src="https://storage.moldova1.md/images/96c65391-26b5-4cfe-aca8-9c29d3204971.jpg" alt="Film Image">
+    </div>
+  </section>
+
+  <!-- Popular Movies Section -->
+  <section class="popular-movies">
+    <h2>Filme Populare</h2>
+    <div class="card-wrapper">
+      <div class="card">
+        <img src="https://cdn.cinematerial.com/p/297x/blfzlw0x/dune-movie-cover-md.jpg?v=1632196744" alt="Movie 1">
+        <h3>Dune</h3>
+        <p>Descrierea filmului 1. Aventura și fantezia încep aici.</p>
+        <a href="#" class="card-btn">Vezi Detalii</a>
+      </div>
+      <div class="card">
+        <img src="https://m.media-amazon.com/images/M/MV5BMjAxMzY3NjcxNF5BMl5BanBnXkFtZTcwNTI5OTM0Mw@@._V1_FMjpg_UX1000_.jpg" alt="Movie 2">
+        <h3>Inception</h3>
+        <p>Acțiune intensă într-un peisaj fabulos. Nu rata acest film.</p>
+        <a href="#" class="card-btn">Vezi Detalii</a>
+      </div>
+      <div class="card">
+        <img src="https://m.media-amazon.com/images/M/MV5BYjE0MmVmM2YtMDM5MS00ZjhlLThhNTctYmQ2ZDE2NzY4ZjY2XkEyXkFqcGc@._V1_FMjpg_UX1000_.jpg" alt="Movie 3">
+        <h3>Seven</h3>
+        <p>O poveste emoționantă despre iubire și sacrificiu.</p>
+        <a href="#" class="card-btn">Vezi Detalii</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- Testimonials -->
+  <section class="testimonials">
+    <h2>Ce spun utilizatorii noștri</h2>
+    <div class="testimonial-card">
+      <p>"MovieZ este locul perfect pentru a descoperi filme noi! Îmi place sistemul de evaluare și recomandările personalizate."</p>
+      <span>- Andrei M.</span>
+    </div>
+    <div class="testimonial-card">
+      <p>"Am găsit cele mai bune filme de groază pe MovieZ! Recomand cu încredere."</p>
+      <span>- Maria P.</span>
+    </div>
+  </section>
+
+  <!-- Newsletter -->
+  <section class="newsletter">
+    <h2>Abonează-te la newsletter-ul nostru!</h2>
+    <p>Primești cele mai noi recomandări de filme direct în inbox-ul tău.</p>
+    <form action="#">
+      <input type="email" placeholder="Introdu adresa ta de email">
+      <button type="submit">Abonează-te</button>
+    </form>
+  </section>
+
+  <!-- Footer -->
+  <footer>
+    <p>&copy; 2025 MovieZ. Toate drepturile rezervate.</p>
+    <p><a href="#">Termeni și condiții</a> | <a href="#">Politica de confidențialitate</a></p>
+  </footer>
+
+  <!-- Scroll to Top Button -->
+  <button id="scroll-top" onclick="scrollToTop()">↑ Înapoi sus</button>
+
+  <script>
+    // Scroll to Top function
+    function scrollToTop() {
+      window.scrollTo({ top: 0, behavior: 'smooth' });
+    }
+
+    // Smooth scroll doar pentru linkuri interne (#)
+    document.querySelectorAll('.nav-links a[href^="#"]').forEach(anchor => {
+      anchor.addEventListener('click', function (e) {
+        e.preventDefault();
+        const target = document.querySelector(this.getAttribute('href'));
+        if (target) {
+          target.scrollIntoView({ behavior: 'smooth' });
+        }
+      });
+    });
+  </script>
+  
+</body>
+</html>
