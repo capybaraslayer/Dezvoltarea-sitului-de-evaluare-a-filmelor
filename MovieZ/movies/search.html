@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="ro">
+<head>
+  <meta charset="UTF-8">
+  <title>Caută filme - MovieZ</title>
+  <link rel="stylesheet" href="../style/main.css">
+  <link rel="stylesheet" href="../style/search.css">
+</head>
+<body>
+  <header class="navbar">
+    <h1 class="logo">MovieZ</h1>
+    <ul class="nav-links">
+      <li><a href="../index/index.html">Home</a></li>
+      <li><a href="top10.html">Top 10</a></li>
+      <li><a href="genre.html">Genuri</a></li>
+      <li><a href="search.html">Caută</a></li>
+      <li><a href="../auth/login.html">Login</a></li>
+    </ul>
+  </header>
+
+  <main class="search-page">
+    <h2>Caută un film</h2>
+    <input type="text" id="searchInput" placeholder="Scrie titlul filmului..." onkeyup="searchMovies()">
+
+    <h3>Filtru după gen</h3>
+    <select id="genreFilter" onchange="filterByGenre()">
+      <option value="toate">Toate</option>
+      <option value="acțiune">Acțiune</option>
+      <option value="comedie">Comedie</option>
+      <option value="drama">Dramă</option>
+      <option value="thriller">Thriller</option>
+    </select>
+
+    <div id="movieResults" class="movie-grid">
+      <div class="movie-card" data-title="Inception" data-genre="thriller">
+        <img src="../assets/images/posters/inception.jpg" alt="Inception">
+        <p>Inception</p>
+      </div>
+      <div class="movie-card" data-title="The Dark Knight" data-genre="acțiune">
+        <img src="../assets/images/posters/interstellar.jpg" alt="Dark Knight">
+        <p>The Dark Knight</p>
+      </div>
+      <div class="movie-card" data-title="Forrest Gump" data-genre="drama">
+        <img src="../assets/images/posters/inception.jpg" alt="Forrest Gump">
+        <p>Forrest Gump</p>
+      </div>
+    </div>
+  </main>
+
+  <footer>
+    <p>&copy; 2025 MovieZ</p>
+  </footer>
+
+  <script src="../js/search.js"></script>
+</body>
+</html>

@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="ro">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Autentificare - MovieZ</title>
+  <link rel="stylesheet" href="../style/auth.css" />
+</head>
+<body class="dark-theme">
+
+  <!-- Navbar -->
+  <nav class="navbar">
+    <div class="logo">MovieZ</div>
+    <ul class="nav-links">
+      <li><a href="../index/index.html">Acasă</a></li>
+      <li><a href="../top10/top10.html">Top 10 Filme</a></li>
+      <li><a href="../genre/genre.html">Genuri Filme</a></li>
+      <li><a href="../register/register.html" class="btn-register">Înregistrare</a></li>
+    </ul>
+  </nav>
+
+  <main class="auth-container">
+    <h1>Autentificare</h1>
+    
+    <!-- Formular de autentificare -->
+    <form id="loginForm" novalidate>
+      <label for="email">Email</label>
+      <input type="email" id="email" name="email" required placeholder="exemplu@mail.com" />
+      
+      <label for="password">Parolă</label>
+      <input type="password" id="password" name="password" required placeholder="Parola ta" />
+      
+      <button type="submit" class="btn-login">Conectează-te</button>
+    </form>
+
+    <p class="text-center">Nu ai cont? <a href="../register/register.html">Înregistrează-te</a></p>
+
+    <!-- Opțiuni autentificare -->
+    <section class="login-options">
+      <h2>Autentificare alternativă</h2>
+      <button class="btn-social google">Google</button>
+      <button class="btn-social facebook">Facebook</button>
+    </section>
+
+    <!-- Mesaj de siguranță -->
+    <section class="security-message">
+      <h2>Securitate</h2>
+      <p>Nu distribui parola ta nimănui. Folosește un password manager pentru a-ți gestiona parolele în siguranță.</p>
+    </section>
+  </main>
+
+  <!-- Footer -->
+  <footer class="footer">
+    <p>&copy; 2025 MovieZ. Toate drepturile rezervate.</p>
+    <nav class="footer-nav">
+      <a href="../index/index.html">Acasă</a>
+      <a href="../top10/top10.html">Top 10</a>
+      <a href="../genre/genre.html">Genuri</a>
+      <a href="../register/register.html">Înregistrare</a>
+    </nav>
+  </footer>
+
+  <script src="../js/form-validation.js"></script>
+</body>
+</html>

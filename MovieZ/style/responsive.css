@@ -1,0 +1,60 @@
+@media (max-width: 768px) {
+  .nav-links {
+    flex-direction: column;
+    gap: 0.5rem;
+  }
+
+  .main-content {
+    padding: 1rem;
+  }
+
+  .movie-card {
+    padding: 1rem;
+  }
+
+  .movie-info h2 {
+    font-size: 1.5rem;
+  }
+
+  .rating {
+    font-size: 1.5rem;
+  }
+}
+/* Tema implicită - dark */
+body.dark-theme {
+  background-color: #121212;
+  color: #f0f0f0;
+}
+
+/* Tema light */
+body.light-theme {
+  background-color: #fdfdfd;
+  color: #111;
+}
+
+/* Buton temă */
+.theme-toggle button {
+  background: none;
+  border: none;
+  color: inherit;
+  font-size: 1.4rem;
+  cursor: pointer;
+  margin-left: 1rem;
+}
+
+body.light-theme .navbar,
+body.light-theme .footer {
+  background-color: #ffffff;
+  color: #111;
+}
+
+body.light-theme .nav-links a,
+body.light-theme .footer a {
+  color: #333;
+}
+
+body.dark-theme .navbar,
+body.dark-theme .footer {
+  background-color: #111;
+  color: #f0f0f0;
+}

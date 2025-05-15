@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="ro">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Înregistrare - MovieZ</title>
+  <link rel="stylesheet" href="../style/auth.css" />
+</head>
+<body class="dark-theme">
+
+  <!-- Navbar -->
+    <div class="logo">MovieZ</div>
+    <ul class="nav-links">
+      <li><a href="../index/index.html">Acasă</a></li>
+      <li><a href="../top10/top10.html">Top 10 Filme</a></li>
+      <li><a href="../genre/genre.html">Genuri Filme</a></li>
+      <li><a href="../login/login.html" class="btn-login">Autentificare</a></li>
+    </ul>
+  </nav>
+
+  <main class="auth-container">
+    <h1>Înregistrează-te</h1>
+    
+    <!-- Formular de înregistrare -->
+    <form id="registerForm" novalidate>
+      <label for="username">Nume utilizator</label>
+      <input type="text" id="username" name="username" required minlength="3" placeholder="Alege un nume de utilizator" />
+      
+      <label for="email">Email</label>
+      <input type="email" id="email" name="email" required placeholder="exemplu@mail.com" />
+
+      <label for="password">Parolă</label>
+      <input type="password" id="password" name="password" required minlength="6" placeholder="Minim 6 caractere" />
+      
+      <label for="passwordConfirm">Confirmă parola</label>
+      <input type="password" id="passwordConfirm" name="passwordConfirm" required minlength="6" placeholder="Reintrodu parola" />
+      
+      <button type="submit" class="btn-register">Înregistrează-te</button>
+    </form>
+
+    <p class="text-center">Ai deja cont? <a href="../login/login.html">Conectează-te</a></p>
+
+    <!-- Beneficii înregistrare -->
+    <section class="benefits">
+      <h2>De ce să te înregistrezi?</h2>
+      <ul>
+        <li>Evaluare personalizată a filmelor</li>
+        <li>Crearea listei tale de filme favorite</li>
+        <li>Comentarii și recenzii</li>
+        <li>Acces la recomandări pe genuri</li>
+      </ul>
+    </section>
+
+    <!-- Sfaturi pentru o parolă sigură -->
+    <section class="password-tips">
+      <h2>Cum să alegi o parolă sigură</h2>
+      <p>Folosește cel puțin 6 caractere, combinație de litere mari, mici, cifre și simboluri.</p>
+      <ul>
+        <li>Nu folosi informații personale</li>
+        <li>Nu folosi parole comune</li>
+        <li>Schimbă parola regulat</li>
+      </ul>
+    </section>
+  </main>
+
+  <!-- Footer -->
+  <footer class="footer">
+    <p>&copy; 2025 MovieZ. Toate drepturile rezervate.</p>
+    <nav class="footer-nav">
+      <a href="../index/index.html">Acasă</a>
+      <a href="../top10/top10.html">Top 10</a>
+      <a href="../genre/genre.html">Genuri</a>
+      <a href="../login/login.html">Autentificare</a>
+    </nav>
+  </footer>
+
+  <script src="../js/form-validation.js"></script>
+</body>
+</html>

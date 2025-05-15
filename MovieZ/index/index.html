@@ -1,112 +1,243 @@
 <!DOCTYPE html>
 <html lang="ro">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta name="description" content="MovieZ - Explorează cele mai bune filme, recomandări și descărcări de rezumate.">
-  <title>MovieZ | Pagina Principală</title>
-  <link rel="stylesheet" href="../css/style.css">
-  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@600&family=Roboto:wght@400&display=swap" rel="stylesheet">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>MovieZ - Pagina Principală</title>
+  <link rel="stylesheet" href="../style/main.css" />
 </head>
-<body>
+<nav class="floating-nav">
+  <a href="/index/index.html" title="Home">
+    <i class="fas fa-home"></i>
+  </a>
+  <a href="/top/top.html" title="Top 10 Filme">
+    <i class="fas fa-star"></i>
+  </a>
+  <a href="/genuri/genuri.html" title="Genuri">
+    <i class="fas fa-film"></i>
+  </a>
+  <a href="#comment-section" title="Comentarii">
+    <i class="fas fa-comments"></i>
+  </a>
+</nav>
 
-  <!-- Navbar -->
-  <nav class="navbar">
-    <div class="logo">MovieZ</div>
-    <ul class="nav-links">
-      <li><a href="#" class="active">Home</a></li>
-      <li><a href="../top10/top10.html">Top 10 Filme</a></li>
-      <li><a href="../genres/genre.html">Tipuri de Filme</a></li>
-      <li><a href="../despre/despre.html">Despre</a></li>
-    </ul>
-  </nav>
+<body class="dark-theme">
 
-  <!-- Home Section -->
-  <section class="home-section" id="home">
-    <div class="home-text">
-      <h2>Bine ai venit la MovieZ!</h2>
-      <p>Explorați cele mai populare filme, aflați detalii interesante și descărcați rezumatele filmelor. MovieZ este platforma ideală pentru pasionații de cinema.</p>
-      <a href="../top10/top10.html">Vezi Top 10 Filme</a>
+  <!-- NAVBAR -->
+  <header class="navbar" role="banner">
+    <div class="logo" aria-label="MovieZ Logo">🎬 MovieZ</div>
+    <nav role="navigation" aria-label="Meniu principal">
+      <a href="../index/index.html" class="active" aria-current="page">Home</a>
+      <a href="../movies/top10.html">Top 10</a>
+      <a href="../movies/genre.html">Genuri</a>
+    </nav>
+    <div class="search-bar" role="search">
+      <input type="search" placeholder="Caută filme..." aria-label="Caută filme" />
+      <button aria-label="Caută">🔍</button>
     </div>
-    <div class="home-image">
-      <img src="https://storage.moldova1.md/images/96c65391-26b5-4cfe-aca8-9c29d3204971.jpg" alt="Film Image">
+    <div class="auth-links" aria-label="Autentificare">
+      <a href="../auth/login.html">Login</a>
+      <a href="../auth/register.html">Register</a>
     </div>
-  </section>
+    <button id="theme-toggle" aria-label="Schimbă tema">🌙</button>
+  </header>
 
-  <!-- Popular Movies Section -->
-  <section class="popular-movies">
-    <h2>Filme Populare</h2>
-    <div class="card-wrapper">
-      <div class="card">
-        <img src="https://cdn.cinematerial.com/p/297x/blfzlw0x/dune-movie-cover-md.jpg?v=1632196744" alt="Movie 1">
-        <h3>Dune</h3>
-        <p>Descrierea filmului 1. Aventura și fantezia încep aici.</p>
-        <a href="#" class="card-btn">Vezi Detalii</a>
+  <!-- MAIN CONTENT -->
+  <main class="main-layout" role="main">
+    <!-- LEFT: CAROUSEL -->
+    <section class="main-carousel" aria-label="Carousel video featured">
+      <div class="carousel-item active">
+        <img src="../assets/images/MV5BMWQ4YWYxYTAtZTlhNC00Nzc3LWE3OWUtZjY5MThlNWNiYTBiXkEyXkFqcGc@._V1_FMjpg_UX1000_.jpg" alt="Poster Andor" />
+        <div class="carousel-info">
+          <h2>Diego Luna on Cassian's Growth in "Andor" Season 2</h2>
+          <p>Watch our Star Wars Celebration Interview</p>
+          <span>❤️ 144 👍 270</span>
+        </div>
       </div>
-      <div class="card">
-        <img src="https://m.media-amazon.com/images/M/MV5BMjAxMzY3NjcxNF5BMl5BanBnXkFtZTcwNTI5OTM0Mw@@._V1_FMjpg_UX1000_.jpg" alt="Movie 2">
-        <h3>Inception</h3>
-        <p>Acțiune intensă într-un peisaj fabulos. Nu rata acest film.</p>
-        <a href="#" class="card-btn">Vezi Detalii</a>
+      <button class="carousel-btn prev" id="carousel-prev">←</button>
+      <button class="carousel-btn next" id="carousel-next">→</button>
+    </section>
+
+    <!-- RIGHT: UP NEXT -->
+    <aside class="up-next" aria-label="Următoarele videoclipuri">
+      <h3>Up Next</h3>
+      <ul class="upnext-list">
+        <li>
+          <img src="https://m.media-amazon.com/images/M/MV5BMjAxMzY3NjcxNF5BMl5BanBnXkFtZTcwNTI5OTM0Mw@@._V1_FMjpg_UX1000_.jpg" alt="Inception" />
+          <div class="video-info">
+            <h4>Inception</h4>
+            <p>Un hoț care fură secrete prin visuri trebuie să implanteze o idee.</p>
+            <span>❤️ 320 👍 580</span>
+          </div>
+        </li>
+        <li>
+          <img src="https://m.media-amazon.com/images/M/MV5BYzdjMDAxZGItMjI2My00ODA1LTlkNzItOWFjMDU5ZDJlYWY3XkEyXkFqcGc@._V1_FMjpg_UX1000_.jpg" alt="Interstellar" />
+          <div class="video-info">
+            <h4>Interstellar</h4>
+            <p>O călătorie epică în spațiu pentru a salva umanitatea.</p>
+            <span>❤️ 410 👍 760</span>
+          </div>
+        </li>
+        <li>
+          <img src="https://m.media-amazon.com/images/M/MV5BMTMxNTMwODM0NF5BMl5BanBnXkFtZTcwODAyMTk2Mw@@._V1_FMjpg_UX1000_.jpg" alt="The dark Knight" />
+          <div class="video-info">
+            <h4>The Dark Knight</h4>
+            <p>Batman luptă cu Joker într-un Gotham corupt.</p>
+            <span>❤️ 500 👍 820</span>
+          </div>
+        </li>
+      </ul>
+      <div class="register-prompt" style="margin-top: 1rem;">
+        <p>Nu ai încă cont? Înregistrează-te acum!</p>
+        <a href="../auth/register.html" class="btn-register">Înregistrează-te</a>
       </div>
-      <div class="card">
-        <img src="https://m.media-amazon.com/images/M/MV5BYjE0MmVmM2YtMDM5MS00ZjhlLThhNTctYmQ2ZDE2NzY4ZjY2XkEyXkFqcGc@._V1_FMjpg_UX1000_.jpg" alt="Movie 3">
-        <h3>Seven</h3>
-        <p>O poveste emoționantă despre iubire și sacrificiu.</p>
-        <a href="#" class="card-btn">Vezi Detalii</a>
+    </aside>
+
+    <!-- TRENDING NOW -->
+    <section class="trending-now">
+      <h2>Trending Now</h2>
+      <div class="trending-cards">
+        <div class="trending-card">
+          <img src="https://m.media-amazon.com/images/M/MV5BNTc0YmQxMjEtODI5MC00NjFiLTlkMWUtOGQ5NjFmYWUyZGJhXkEyXkFqcGc@._V1_FMjpg_UX1000_.jpg" alt="Dune: Part Two" />
+          <div class="card-info">
+            <h4>Dune: Part Two</h4>
+            <p>Paul Atreides conduce o revoluție interstelară.</p>
+          </div>
+        </div>
+        <div class="trending-card">
+          <img src="https://m.media-amazon.com/images/M/MV5BN2JkMDc5MGQtZjg3YS00NmFiLWIyZmQtZTJmNTM5MjVmYTQ4XkEyXkFqcGc@._V1_.jpghttps://m.media-amazon.com/images/M/MV5BN2JkMDc5MGQtZjg3YS00NmFiLWIyZmQtZTJmNTM5MjVmYTQ4XkEyXkFqcGc@._V1_.jpg" alt="Oppenheimer" />
+          <div class="card-info">
+            <h4>Oppenheimer</h4>
+            <p>Povestea creării celei mai puternice arme din istorie.</p>
+          </div>
+        </div>
+        <div class="trending-card">
+          <img src="https://upload.wikimedia.org/wikipedia/en/0/0b/Barbie_2023_poster.jpg" alt="Barbie" />
+          <div class="card-info">
+            <h4>Barbie</h4>
+            <p>O călătorie fantastică și auto-descoperire în lumea păpușilor.</p>
+          </div>
+        </div>
       </div>
-    </div>
-  </section>
+    </section>
+<section class="comment-section">
+  <h2>Scrie un comentariu despre un film</h2>
+  <form id="comment-form">
+    <input type="text" id="username" placeholder="Numele tău" required />
+    <input type="text" id="movie" placeholder="Titlul filmului" required />
+    <textarea id="comment" rows="4" placeholder="Comentariul tău..." required></textarea>
+    <button type="submit">Trimite comentariul</button>
+  </form>
 
-  <!-- Testimonials -->
-  <section class="testimonials">
-    <h2>Ce spun utilizatorii noștri</h2>
-    <div class="testimonial-card">
-      <p>"MovieZ este locul perfect pentru a descoperi filme noi! Îmi place sistemul de evaluare și recomandările personalizate."</p>
-      <span>- Andrei M.</span>
-    </div>
-    <div class="testimonial-card">
-      <p>"Am găsit cele mai bune filme de groază pe MovieZ! Recomand cu încredere."</p>
-      <span>- Maria P.</span>
-    </div>
-  </section>
+  <div id="comments-list">
+    <!-- Comentariile apar aici -->
+  </div>
+</section>
+<script>
+  const form = document.getElementById("comment-form");
+  const commentList = document.getElementById("comments-list");
 
-  <!-- Newsletter -->
-  <section class="newsletter">
-    <h2>Abonează-te la newsletter-ul nostru!</h2>
-    <p>Primești cele mai noi recomandări de filme direct în inbox-ul tău.</p>
-    <form action="#">
-      <input type="email" placeholder="Introdu adresa ta de email">
-      <button type="submit">Abonează-te</button>
-    </form>
-  </section>
+  form.addEventListener("submit", function (e) {
+    e.preventDefault();
 
-  <!-- Footer -->
-  <footer>
-    <p>&copy; 2025 MovieZ. Toate drepturile rezervate.</p>
-    <p><a href="#">Termeni și condiții</a> | <a href="#">Politica de confidențialitate</a></p>
+    const username = document.getElementById("username").value.trim();
+    const movie = document.getElementById("movie").value.trim();
+    const commentText = document.getElementById("comment").value.trim();
+
+    if (!username || !movie || !commentText) return;
+
+    const commentDiv = document.createElement("div");
+    commentDiv.classList.add("comment");
+
+    commentDiv.innerHTML = `
+      <div class="header">${username} a comentat la <strong>${movie}</strong>:</div>
+      <p>${commentText}</p>
+    `;
+
+    commentList.prepend(commentDiv); // Comentariul apare sus
+    form.reset(); // Golește formularul
+  });
+</script>
+
+
+    <!-- DESCRIERE -->
+    <section class="description-container" style="max-width: 900px; margin: 60px auto;">
+      <h2>Despre MovieZ</h2>
+      <p>
+        MovieZ este platforma ideală pentru iubitorii de filme, oferind recenzii actualizate, trailere exclusive și recomandări personalizate.
+        Explorează cele mai noi lansări, notează-ți favoritele și conectează-te cu o comunitate pasionată de cinema.
+      </p>
+    </section>
+  </main>
+
+  <!-- FOOTER -->
+  <footer class="footer">
+    <div class="footer-section about-us">
+      <h4>Despre MovieZ</h4>
+      <p>
+        MovieZ este locul unde pasiunea pentru film prinde viață. Oferim recomandări personalizate, recenzii și știri din lumea cinematografiei.
+      </p>
+    </div>
+    <div class="footer-section useful-links">
+      <h4>Linkuri utile</h4>
+      <ul>
+        <li><a href="../index/index.html">Acasă</a></li>
+        <li><a href="../movies/top10.html">Top 10 Filme</a></li>
+        <li><a href="../movies/genre.html">Genuri</a></li>
+        <li><a href="../auth/login.html">Autentificare</a></li>
+        <li><a href="../auth/register.html">Înregistrare</a></li>
+      </ul>
+    </div>
+    <div class="footer-section newsletter">
+      <h4>Abonează-te la newsletter</h4>
+      <form id="newsletter-form">
+        <input type="email" name="email" placeholder="Adresa ta de email" required />
+        <button type="submit">Abonează-te</button>
+      </form>
+    </div>
+    <div class="footer-section social-icons">
+      <h4>Urmărește-ne</h4>
+      <a href="#">📘</a>
+      <a href="#">🐦</a>
+      <a href="#">📸</a>
+    </div>
   </footer>
 
-  <!-- Scroll to Top Button -->
-  <button id="scroll-top" onclick="scrollToTop()">↑ Înapoi sus</button>
+  <!-- BACK TO TOP -->
+  <button id="back-to-top" style="display:none;">↑</button>
 
+  <!-- SCRIPT -->
   <script>
-    // Scroll to Top function
-    function scrollToTop() {
-      window.scrollTo({ top: 0, behavior: 'smooth' });
-    }
+    // Theme toggle
+    const themeToggle = document.getElementById('theme-toggle');
+    const savedTheme = localStorage.getItem('theme') || 'dark';
+    document.body.classList.remove('light-theme', 'dark-theme');
+    document.body.classList.add(savedTheme + '-theme');
+    themeToggle.textContent = savedTheme === 'dark' ? '🌙' : '☀️';
 
-    // Smooth scroll doar pentru linkuri interne (#)
-    document.querySelectorAll('.nav-links a[href^="#"]').forEach(anchor => {
-      anchor.addEventListener('click', function (e) {
-        e.preventDefault();
-        const target = document.querySelector(this.getAttribute('href'));
-        if (target) {
-          target.scrollIntoView({ behavior: 'smooth' });
-        }
-      });
+    themeToggle.addEventListener('click', () => {
+      const current = document.body.classList.contains('dark-theme') ? 'dark' : 'light';
+      const next = current === 'dark' ? 'light' : 'dark';
+      document.body.classList.replace(current + '-theme', next + '-theme');
+      themeToggle.textContent = next === 'dark' ? '🌙' : '☀️';
+      localStorage.setItem('theme', next);
+    });
+
+    // Back to top
+    const backToTopBtn = document.getElementById('back-to-top');
+    window.addEventListener('scroll', () => {
+      backToTopBtn.style.display = window.pageYOffset > 300 ? 'block' : 'none';
+    });
+    backToTopBtn.addEventListener('click', () => {
+      window.scrollTo({top: 0, behavior: 'smooth'});
+    });
+
+    // Newsletter
+    document.getElementById('newsletter-form').addEventListener('submit', e => {
+      e.preventDefault();
+      alert('Mulțumim pentru abonare!');
+      e.target.reset();
     });
   </script>
-  
 </body>
 </html>

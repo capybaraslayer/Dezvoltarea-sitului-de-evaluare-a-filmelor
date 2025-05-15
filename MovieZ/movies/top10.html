@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="ro">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Top 10 Filme - MovieZ</title>
+  <link rel="stylesheet" href="../style/main.css" />
+</head>
+<body class="dark-theme">
+
+  <!-- Navbar -->
+  <nav class="navbar">
+    <div class="logo">MovieZ</div>
+    <ul class="nav-links">
+      <li><a href="../index/index.html">Acasă</a></li>
+      <li><a href="../genre/genre.html">Genuri Filme</a></li>
+      <li><a href="../login/login.html">Autentificare</a></li>
+      <li><a href="../register/register.html">Înregistrare</a></li>
+    </ul>
+  </nav>
+
+  <main class="top10-container">
+    <h1>Top 10 Filme</h1>
+    <p>Descoperă cele mai apreciate filme de pe MovieZ, alese de comunitatea noastră!</p>
+    
+    <ol class="top10-list">
+      <li>
+        <img src="../assets/images/movie1.jpg" alt="Numele filmului 1" />
+        <div class="movie-info">
+          <h2>Filmul 1: The Great Escape</h2>
+          <p>O poveste captivantă a unui grup de prizonieri care încearcă să evadeze în timpul celui de-al Doilea Război Mondial.</p>
+          <span>Rating: ★★★★★</span>
+          <button class="btn-download">Descarcă Rezumat PDF</button>
+        </div>
+      </li>
+      <li>
+        <img src="../assets/images/movie2.jpg" alt="Numele filmului 2" />
+        <div class="movie-info">
+          <h2>Filmul 2: Lost in Time</h2>
+          <p>Aventuri incredibile prin timp ale unui grup de exploratori în căutarea unei civilizații dispărute.</p>
+          <span>Rating: ★★★★☆</span>
+          <button class="btn-download">Descarcă Rezumat PDF</button>
+        </div>
+      </li>
+      <!-- Continuă lista până la 10 -->
+    </ol>
+
+    <!-- Secțiune recenzii -->
+    <section class="reviews-section">
+      <h2>Ce spun utilizatorii?</h2>
+      <div class="review">
+        <p><strong>Andrei:</strong> „Site-ul MovieZ m-a ajutat să descopăr filme minunate pe care altfel nu le-aș fi găsit.”</p>
+      </div>
+      <div class="review">
+        <p><strong>Maria:</strong> „Interfața este intuitivă și design-ul este super modern!”</p>
+      </div>
+    </section>
+  </main>
+
+  <!-- Footer -->
+  <footer class="footer">
+    <p>&copy; 2025 MovieZ. Toate drepturile rezervate.</p>
+    <nav class="footer-nav">
+      <a href="../index/index.html">Acasă</a>
+      <a href="../genre/genre.html">Genuri</a>
+      <a href="../login/login.html">Autentificare</a>
+      <a href="../register/register.html">Înregistrare</a>
+    </nav>
+  </footer>
+
+  <script>
+    // Exemplu simplu pentru butonul de download PDF
+    document.querySelectorAll('.btn-download').forEach(btn => {
+      btn.addEventListener('click', () => {
+        alert('Funcționalitatea de descărcare PDF va fi implementată curând!');
+      });
+    });
+  </script>
+</body>
+</html>
