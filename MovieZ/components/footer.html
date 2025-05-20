@@ -1,9 +1,36 @@
-<footer class="footer">
-  <p>&copy; 2025 MovieZ. Toate drepturile rezervate.</p>
-  <nav>
-    <a href="#">Termeni</a>
-    <a href="#">Confidențialitate</a>
-    <a href="#">Contact</a>
-  </nav>
-</footer>
+<header class="navbar" role="banner">
+  <div class="navbar__inner">
 
+    <!-- Logo -->
+    <a href="../index/index.html" class="logo" aria-label="MovieZ Home">🎬 MovieZ</a>
+
+    <!-- Meniu mobil -->
+    <button class="navbar__toggle" aria-expanded="false" aria-label="Deschide meniul">
+      <span class="hamburger"></span>
+    </button>
+
+    <!-- Link-uri principale + căutare + autentificare -->
+    <nav class="navbar__menu" role="navigation" aria-label="Meniu principal">
+      <ul class="navbar__links">
+        <li><a href="../index/index.html">Acasă</a></li>
+        <li><a href="../movies/top10.html">Top 10</a></li>
+        <li><a href="../movies/genre.html">Genuri</a></li>
+      </ul>
+
+      <div class="navbar__search" role="search">
+        <label for="movie-search" class="sr-only">Caută filme</label>
+        <input id="movie-search" type="search" placeholder="Caută filme..." />
+        <button type="button" aria-label="Caută"><span>🔍</span></button>
+      </div>
+
+      <div class="navbar__auth">
+        <a href="../auth/login.html" class="btn btn--login">Autentificare</a>
+        <a href="../auth/register.html" class="btn btn--register">Înregistrare</a>
+      </div>
+
+      <button id="theme-toggle" class="navbar__theme-toggle" aria-pressed="false" aria-label="Comută tema">
+        🌙
+      </button>
+    </nav>
+  </div>
+</header>

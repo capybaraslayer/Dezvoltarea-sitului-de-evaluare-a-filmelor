@@ -1,21 +1,24 @@
 <header class="navbar">
-  <div class="logo">🎬 MovieZ</div>
+  <div class="logo" aria-label="Logo MovieZ">🎬 MovieZ</div>
 
-  <nav class="nav-links">
-    <a href="../index/index.html">Home</a>
+  <nav class="nav-links" aria-label="Meniu principal">
+    <a href="../index/index.html">Acasă</a>
     <a href="../movies/top10.html">Top 10</a>
     <a href="../movies/genre.html">Genuri</a>
   </nav>
 
-  <div class="search-bar">
-    <input type="text" placeholder="Caută filme..." />
-    <button>🔍</button>
+  <div class="search-bar" role="search">
+    <label for="movie-search" class="sr-only">Caută filme</label>
+    <input id="movie-search" type="text" placeholder="Caută filme..." />
+    <button type="button" aria-label="Caută"><span>🔍</span></button>
   </div>
-<div class="theme-toggle-container" aria-label="Schimbă tema">
-  <button id="theme-toggle" aria-label="Schimbă tema">🌙</button>
-</div
-  <div class="auth-links">
-    <a href="../auth/login.html">Login</a>
-    <a href="../auth/register.html">Register</a>
+
+  <div class="theme-toggle-container" aria-label="Schimbă tema">
+    <button id="theme-toggle" type="button" aria-pressed="false" aria-label="Comută între mod light și dark">🌙</button>
+  </div>
+
+  <div class="auth-links" aria-label="Link-uri autentificare">
+    <a href="../auth/login.html" class="btn-login">Autentificare</a>
+    <a href="../auth/register.html" class="btn-register">Înregistrare</a>
   </div>
 </header>

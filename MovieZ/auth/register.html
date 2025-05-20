@@ -4,19 +4,28 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>Înregistrare - MovieZ</title>
-  <link rel="stylesheet" href="../style/auth.css" />
+  <link rel="stylesheet" href="../style/register.css" />
 </head>
 <body class="dark-theme">
 
-  <!-- Navbar -->
-    <div class="logo">MovieZ</div>
-    <ul class="nav-links">
-      <li><a href="../index/index.html">Acasă</a></li>
-      <li><a href="../top10/top10.html">Top 10 Filme</a></li>
-      <li><a href="../genre/genre.html">Genuri Filme</a></li>
-      <li><a href="../login/login.html" class="btn-login">Autentificare</a></li>
-    </ul>
-  </nav>
+ <!-- NAVBAR -->
+  <header class="navbar" role="banner">
+    <div class="logo" aria-label="MovieZ Logo">🎬 MovieZ</div>
+    <nav role="navigation" aria-label="Meniu principal">
+      <a href="../index/index.html" class="active" aria-current="page">Home</a>
+      <a href="../movies/top10.html">Top 10</a>
+      <a href="../movies/genre.html">Genuri</a>
+    </nav>
+    <div class="search-bar" role="search">
+      <input type="search" placeholder="Caută filme..." aria-label="Caută filme" />
+      <button aria-label="Caută">🔍</button>
+    </div>
+    <div class="auth-links" aria-label="Autentificare">
+      <a href="../auth/login.html">Login</a>
+      <a href="../auth/register.html">Register</a>
+    </div>
+    <button id="theme-toggle" aria-label="Schimbă tema">🌙</button>
+  </header>
 
   <main class="auth-container">
     <h1>Înregistrează-te</h1>
@@ -63,17 +72,48 @@
     </section>
   </main>
 
-  <!-- Footer -->
-  <footer class="footer">
-    <p>&copy; 2025 MovieZ. Toate drepturile rezervate.</p>
-    <nav class="footer-nav">
-      <a href="../index/index.html">Acasă</a>
-      <a href="../top10/top10.html">Top 10</a>
-      <a href="../genre/genre.html">Genuri</a>
-      <a href="../login/login.html">Autentificare</a>
-    </nav>
-  </footer>
+  <header class="navbar" role="banner">
+  <div class="navbar__inner">
 
+    <!-- Logo -->
+    <a href="../index/index.html" class="logo" aria-label="MovieZ Home">🎬 MovieZ</a>
+
+    <!-- Meniu mobil -->
+    <button class="navbar__toggle" aria-expanded="false" aria-label="Deschide meniul">
+      <span class="hamburger"></span>
+    </button>
+
+    <!-- Link-uri principale + căutare + autentificare -->
+    <footer class="footer">
+    <div class="footer-section about-us">
+      <h4>Despre MovieZ</h4>
+      <p>
+        MovieZ este locul unde pasiunea pentru film prinde viață. Oferim recomandări personalizate, recenzii și știri din lumea cinematografiei.
+      </p>
+    </div>
+
+    <div class="footer-section social-icons">
+      <h4>Urmărește-ne</h4>
+      <a href="#">📘</a>
+      <a href="#">🐦</a>
+      <a href="#">📸</a>
+    </div>
+  </footer>
+  <script>
+    const themeToggle = document.getElementById('theme-toggle');
+    const savedTheme = localStorage.getItem('theme') || 'dark';
+    document.body.classList.remove('light-theme', 'dark-theme');
+    document.body.classList.add(savedTheme + '-theme');
+    themeToggle.textContent = savedTheme === 'dark' ? '🌙' : '☀️';
+
+    themeToggle.addEventListener('click', () => {
+      const current = document.body.classList.contains('dark-theme') ? 'dark' : 'light';
+      const next = current === 'dark' ? 'light' : 'dark';
+      document.body.classList.replace(current + '-theme', next + '-theme');
+      themeToggle.textContent = next === 'dark' ? '🌙' : '☀️';
+      localStorage.setItem('theme', next);
+    });
+</script>
   <script src="../js/form-validation.js"></script>
 </body>
 </html>

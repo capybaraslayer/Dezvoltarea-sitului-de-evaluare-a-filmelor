@@ -3,75 +3,213 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>Genuri Filme - MovieZ</title>
-  <link rel="stylesheet" href="../style/main.css" />
+  <title>Filme cu Search - MovieZ</title>
+  <link rel="stylesheet" href="../style/genres.css" />
 </head>
-<body class="dark-theme">
+<body>
 
-  <!-- Navbar -->
-  <nav class="navbar">
-    <div class="logo">MovieZ</div>
-    <ul class="nav-links">
-      <li><a href="../index/index.html">Acasă</a></li>
-      <li><a href="../top10/top10.html">Top 10 Filme</a></li>
-      <li><a href="../login/login.html">Autentificare</a></li>
-      <li><a href="../register/register.html">Înregistrare</a></li>
-    </ul>
-  </nav>
-
-  <main class="genre-container">
-    <h1>Genuri Filme</h1>
-    
-    <p>Alege un gen și explorează filmele noastre recomandate pentru tine!</p>
-
-    <div class="genres-grid">
-      <a href="thriller.html" class="genre-card">Thriller</a>
-      <a href="horror.html" class="genre-card">Horror</a>
-      <a href="comedy.html" class="genre-card">Comedie</a>
-      <a href="drama.html" class="genre-card">Dramă</a>
-      <a href="action.html" class="genre-card">Acțiune</a>
-      <a href="romance.html" class="genre-card">Romantic</a>
-      <a href="fantasy.html" class="genre-card">Fantastic</a>
-      <a href="sci-fi.html" class="genre-card">Science Fiction</a>
-      <a href="documentary.html" class="genre-card">Documentar</a>
+ <!-- NAVBAR -->
+  <header class="navbar" role="banner">
+    <div class="logo" aria-label="MovieZ Logo">🎬 MovieZ</div>
+    <nav role="navigation" aria-label="Meniu principal">
+      <a href="../index/index.html" class="active" aria-current="page">Home</a>
+      <a href="../movies/top10.html">Top 10</a>
+      <a href="../movies/genre.html">Genuri</a>
+    </nav>
+    <div class="search-bar" role="search">
+      <input type="search" placeholder="Caută filme..." aria-label="Caută filme" />
+      <button aria-label="Caută">🔍</button>
     </div>
+    <div class="auth-links" aria-label="Autentificare">
+      <a href="../auth/login.html">Login</a>
+      <a href="../auth/register.html">Register</a>
+    </div>
+    <button id="theme-toggle" aria-label="Schimbă tema">🌙</button>
+  </header>
 
-    <!-- Descrieri genuri -->
-    <section class="genre-info">
-      <h2>Ce genuri de filme există?</h2>
-      <article>
-        <h3>Thriller</h3>
-        <p>Filme pline de suspans și răsturnări de situație ce țin spectatorul cu sufletul la gură.</p>
-      </article>
-      <article>
-        <h3>Horror</h3>
-        <p>Filme care stârnesc teamă, groază și adrenalină prin povești supranaturale sau terifiante.</p>
-      </article>
-      <article>
-        <h3>Comedie</h3>
-        <p>Filme care te fac să râzi, cu situații amuzante și personaje memorabile.</p>
-      </article>
-      <article>
-        <h3>Dramă</h3>
-        <p>Filme ce explorează adâncimi emoționale și conflicte umane intense.</p>
-      </article>
-      <article>
-        <h3>Acțiune</h3>
-        <p>Filme pline de aventură, urmăriri, lupte și efecte speciale spectaculoase.</p>
-      </article>
-      <!-- mai multe descrieri după nevoie -->
-    </section>
+  <main class="search-container">
+    <h1>Catalog Filme</h1>
+
+    <form class="search-form" onsubmit="return false;">
+      <input
+        type="text"
+        id="searchInput"
+        class="search-input"
+        placeholder="Caută filme după titlu..."
+        autocomplete="off"
+      />
+      <button class="search-button" type="button" onclick="doSearch()">Caută</button>
+    </form>
+
+    <div id="movieResults" class="search-results">
+
+      <!-- Thriller -->
+      <section class="movie-genre" id="thriller">
+        <h2>Thriller</h2>
+        <div class="movie-container">
+          <div class="movie-card" data-title="gone girl">
+            <h3>Gone Girl</h3>
+            <p>O poveste captivantă despre dispariția unei femei și misterele care ies la iveală.</p>
+          </div>
+          <div class="movie-card" data-title="se7en">
+            <h3>Se7en</h3>
+            <p>Doi detectivi urmăresc un criminal în serie care folosește cele șapte păcate capitale.</p>
+          </div>
+          <div class="movie-card" data-title="prisoners">
+            <h3>Prisoners</h3>
+            <p>Un tată disperat încearcă să găsească fiica răpită cu ajutorul unui detectiv.</p>
+          </div>
+          <div class="movie-card" data-title="shutter island">
+            <h3>Shutter Island</h3>
+            <p>Un detectiv investighează dispariția unei paciente dintr-un spital de boli mentale.</p>
+          </div>
+          <div class="movie-card" data-title="the girl with the dragon tattoo">
+            <h3>The Girl with the Dragon Tattoo</h3>
+            <p>Un jurnalist și o hacker investighează o dispariție misterioasă dintr-o familie bogată.</p>
+          </div>
+        </div>
+      </section>
+
+      <!-- Horror -->
+      <section class="movie-genre" id="horror">
+        <h2>Horror</h2>
+        <div class="movie-container">
+          <div class="movie-card" data-title="the conjuring">
+            <h3>The Conjuring</h3>
+            <p>O familie confruntată cu fenomene paranormale în casa lor bântuită.</p>
+          </div>
+          <div class="movie-card" data-title="hereditary">
+            <h3>Hereditary</h3>
+            <p>O familie descoperă secrete întunecate după moartea unei rude apropiate.</p>
+          </div>
+          <div class="movie-card" data-title="it">
+            <h3>It</h3>
+            <p>Copiii dintr-un orășel sunt terorizați de o entitate malefică în formă de clovn.</p>
+          </div>
+          <div class="movie-card" data-title="a quiet place">
+            <h3>A Quiet Place</h3>
+            <p>O familie trebuie să trăiască în tăcere pentru a supraviețui creaturilor care reacționează la sunet.</p>
+          </div>
+          <div class="movie-card" data-title="the babadook">
+            <h3>The Babadook</h3>
+            <p>O mamă și fiul ei sunt urmăriți de o prezență malefică dintr-o carte de povești.</p>
+          </div>
+        </div>
+      </section>
+
+      <!-- Comedie -->
+      <section class="movie-genre" id="comedy">
+        <h2>Comedie</h2>
+        <div class="movie-container">
+          <div class="movie-card" data-title="superbad">
+            <h3>Superbad</h3>
+            <p>Doi adolescenți încearcă să se distreze și să facă o impresie bună înainte de absolvire.</p>
+          </div>
+          <div class="movie-card" data-title="the hangover">
+            <h3>The Hangover</h3>
+            <p>Un burlac se trezește în Las Vegas fără să-și amintească ce s-a întâmplat noaptea trecută.</p>
+          </div>
+          <div class="movie-card" data-title="mean girls">
+            <h3>Mean Girls</h3>
+            <p>O fată încearcă să navigheze prin liceu și să evite regina grupului de fete populare.</p>
+          </div>
+          <div class="movie-card" data-title="step brothers">
+            <h3>Step Brothers</h3>
+            <p>Doi bărbați adulți devin frați vitregi și încearcă să se înțeleagă.</p>
+          </div>
+          <div class="movie-card" data-title="anchorman">
+            <h3>Anchorman</h3>
+            <p>Un prezentator de știri excentric și echipa lui într-o comedie plină de umor absurd.</p>
+          </div>
+        </div>
+      </section>
+
+      <!-- Dramă -->
+      <section class="movie-genre" id="drama">
+        <h2>Dramă</h2>
+        <div class="movie-container">
+          <div class="movie-card" data-title="the shawshank redemption">
+            <h3>The Shawshank Redemption</h3>
+            <p>Un bărbat condamnat pe nedrept găsește speranță și prietenie în închisoare.</p>
+          </div>
+          <div class="movie-card" data-title="forrest gump">
+            <h3>Forrest Gump</h3>
+            <p>Povestea emoționantă a unui bărbat cu o inimă mare, care trăiește evenimente istorice majore.</p>
+          </div>
+          <div class="movie-card" data-title="the pursuit of happyness">
+            <h3>The Pursuit of Happyness</h3>
+            <p>Un tată singur luptă pentru o viață mai bună alături de fiul său.</p>
+          </div>
+          <div class="movie-card" data-title="a beautiful mind">
+            <h3>A Beautiful Mind</h3>
+            <p>Viața unui matematician genial care se luptă cu schizofrenia.</p>
+          </div>
+          <div class="movie-card" data-title="the green mile">
+            <h3>The Green Mile</h3>
+            <p>Paznicii unei închisori descoperă secrete supranaturale legate de un deținut neobișnuit.</p>
+          </div>
+        </div>
+      </section>
+
+      <!-- Mesaj când nu sunt rezultate -->
+      <div id="noResultsMsg" style="display:none; text-align:center; color:#40c4ff; font-size:1.2rem; margin-top:2rem;">
+        Niciun rezultat găsit.
+      </div>
+
+    </div>
   </main>
 
-  <!-- Footer -->
-  <footer class="footer">
+  <footer>
     <p>&copy; 2025 MovieZ. Toate drepturile rezervate.</p>
-    <nav class="footer-nav">
-      <a href="../index/index.html">Acasă</a>
-      <a href="../top10/top10.html">Top 10</a>
-      <a href="../login/login.html">Autentificare</a>
-      <a href="../register/register.html">Înregistrare</a>
-    </nav>
   </footer>
+
+  <script>
+    function doSearch() {
+      const query = document.getElementById('searchInput').value.trim().toLowerCase();
+      const cards = document.querySelectorAll('.movie-card');
+      const noResultsMsg = document.getElementById('noResultsMsg');
+      let foundAny = false;
+
+      if (!query) {
+        cards.forEach(card => card.style.display = '');
+        noResultsMsg.style.display = 'none';
+        return;
+      }
+
+      cards.forEach(card => {
+        const title = card.getAttribute('data-title');
+        if (title.includes(query)) {
+          card.style.display = '';
+          foundAny = true;
+        } else {
+          card.style.display = 'none';
+        }
+      });
+
+      noResultsMsg.style.display = foundAny ? 'none' : 'block';
+    }
+
+    document.getElementById('searchInput').addEventListener('keypress', e => {
+      if (e.key === 'Enter') {
+        e.preventDefault();
+        doSearch();
+      }
+    });
+  </script>
+  <script>
+    const themeToggle = document.getElementById('theme-toggle');
+    const savedTheme = localStorage.getItem('theme') || 'dark';
+    document.body.classList.remove('light-theme', 'dark-theme');
+    document.body.classList.add(savedTheme + '-theme');
+    themeToggle.textContent = savedTheme === 'dark' ? '🌙' : '☀️';
+
+    themeToggle.addEventListener('click', () => {
+      const current = document.body.classList.contains('dark-theme') ? 'dark' : 'light';
+      const next = current === 'dark' ? 'light' : 'dark';
+      document.body.classList.replace(current + '-theme', next + '-theme');
+      themeToggle.textContent = next === 'dark' ? '🌙' : '☀️';
+      localStorage.setItem('theme', next);
+    });
+  </script>
 </body>
 </html>

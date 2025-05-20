@@ -5,23 +5,26 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>MovieZ - Pagina Principală</title>
   <link rel="stylesheet" href="../style/main.css" />
+  <link
+  rel="stylesheet"
+  href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"
+/>
 </head>
-<nav class="floating-nav">
-  <a href="/index/index.html" title="Home">
-    <i class="fas fa-home"></i>
-  </a>
-  <a href="/top/top.html" title="Top 10 Filme">
-    <i class="fas fa-star"></i>
-  </a>
-  <a href="/genuri/genuri.html" title="Genuri">
-    <i class="fas fa-film"></i>
-  </a>
-  <a href="#comment-section" title="Comentarii">
-    <i class="fas fa-comments"></i>
-  </a>
-</nav>
-
 <body class="dark-theme">
+  <nav class="floating-nav">
+    <a href="../index/index.html#up-next" title="Up Next">
+      <i class="fas fa-forward"></i>
+    </a>
+    <a href="../index/index.html#trailers" title="Trailere">
+  <i class="fas fa-film"></i>
+</a>
+    <a href="../index/index.html#comment-section" title="Comentarii">
+      <i class="fas fa-comments"></i>
+    </a>
+    <a href="../index/index.html#footer" title="Footer">
+      <i class="fas fa-shoe-prints"></i>
+    </a>
+  </nav>
 
   <!-- NAVBAR -->
   <header class="navbar" role="banner">
@@ -47,10 +50,10 @@
     <!-- LEFT: CAROUSEL -->
     <section class="main-carousel" aria-label="Carousel video featured">
       <div class="carousel-item active">
-        <img src="../assets/images/MV5BMWQ4YWYxYTAtZTlhNC00Nzc3LWE3OWUtZjY5MThlNWNiYTBiXkEyXkFqcGc@._V1_FMjpg_UX1000_.jpg" alt="Poster Andor" />
+        <img src="https://prod-ripcut-delivery.disney-plus.net/v1/variant/disney/567786020DDF0DD9ADB8590C6B365251EF728194FD4E57530E52BC44E6A810AB/scale?width=1200&aspectRatio=1.78&format=webp" alt="Poster Andor" />
         <div class="carousel-info">
-          <h2>Diego Luna on Cassian's Growth in "Andor" Season 2</h2>
-          <p>Watch our Star Wars Celebration Interview</p>
+          <h2>Watch now:How I met your mother</h2>
+          <p>Ted Mosby, un arhitect, le povestește copiilor săi evenimentele care l-au determinat să o cunoască pe mama lor.</p>
           <span>❤️ 144 👍 270</span>
         </div>
       </div>
@@ -58,7 +61,7 @@
       <button class="carousel-btn next" id="carousel-next">→</button>
     </section>
 
-    <!-- RIGHT: UP NEXT -->
+<section id="up-next">
     <aside class="up-next" aria-label="Următoarele videoclipuri">
       <h3>Up Next</h3>
       <ul class="upnext-list">
@@ -92,6 +95,7 @@
         <a href="../auth/register.html" class="btn-register">Înregistrează-te</a>
       </div>
     </aside>
+</section>
 
     <!-- TRENDING NOW -->
     <section class="trending-now">
@@ -120,6 +124,39 @@
         </div>
       </div>
     </section>
+    <section id="trailers">
+  <main class="trailers-container">
+    <h2>Trailere Filme</h2>
+    <div class="trailer-grid">
+      <div class="trailer-card">
+        <h3>Inception</h3>
+        <iframe src="https://www.youtube.com/embed/YoHD9XEInc0" frameborder="0" allowfullscreen></iframe>
+      </div>
+
+      <div class="trailer-card">
+        <h3>Interstellar</h3>
+        <iframe src="https://www.youtube.com/embed/zSWdZVtXT7E" frameborder="0" allowfullscreen></iframe>
+      </div>
+
+      <div class="trailer-card">
+        <h3>The Batman</h3>
+        <iframe src="https://www.youtube.com/embed/mqqft2x_Aa4" frameborder="0" allowfullscreen></iframe>
+      </div>
+    </div>
+
+  
+      <h2>Recomandări pentru tine</h2>
+      <ul>
+        <li>✔️ Dacă ți-a plăcut *Inception*, vezi și *Tenet*</li>
+        <li>✔️ Dacă ți-a plăcut *Interstellar*, încearcă *Gravity*</li>
+        <li>✔️ Fan DC? Nu rata *The Dark Knight Rises*</li>
+      </ul>
+    </section>
+  </main>
+</section>
+    <!-- COMMENT SECTION -->
+     <section id="comment-section">
+<!-- COMMENT SECTION -->
 <section class="comment-section">
   <h2>Scrie un comentariu despre un film</h2>
   <form id="comment-form">
@@ -128,14 +165,55 @@
     <textarea id="comment" rows="4" placeholder="Comentariul tău..." required></textarea>
     <button type="submit">Trimite comentariul</button>
   </form>
-
-  <div id="comments-list">
-    <!-- Comentariile apar aici -->
+ <div id="comments-list">
+    <h3>Comentarii</h3>
+    <div class="comment">
+      <div class="header">John Doe a comentat la <strong>Inception</strong>:</div>
+      <p>Un film genial! Recomand cu căldură.</p>
+    </div>
+    <div class="comment">
+      <div class="header">Jane Smith a comentat la <strong>Interstellar</strong>:</div>
+      <p>O capodoperă vizuală și emoțională!</p>
+    </div>
+    <!-- Comentariile noi vor fi adăugate aici -->
   </div>
 </section>
+  <div id="comments-list">
+    <h3>Comentarii</h3>
+    <!-- Comentariile vor fi adăugate aici -->
+  </div>
+</section>
+
 <script>
   const form = document.getElementById("comment-form");
   const commentList = document.getElementById("comments-list");
+
+  // Funcție pentru a afișa un comentariu în lista de comentarii
+  function displayComment(username, movie, commentText) {
+    const commentDiv = document.createElement("div");
+    commentDiv.classList.add("comment");
+
+    commentDiv.innerHTML = `
+      <div class="header">${username} a comentat la <strong>${movie}</strong>:</div>
+      <p>${commentText}</p>
+    `;
+    commentList.appendChild(commentDiv);
+  }
+
+  // Încarcă comentariile din localStorage la încărcarea paginii
+  function loadComments() {
+    const comments = JSON.parse(localStorage.getItem("comments")) || [];
+    comments.forEach(({username, movie, commentText}) => {
+      displayComment(username, movie, commentText);
+    });
+  }
+
+  // Salvează comentariile în localStorage
+  function saveComment(username, movie, commentText) {
+    const comments = JSON.parse(localStorage.getItem("comments")) || [];
+    comments.push({username, movie, commentText});
+    localStorage.setItem("comments", JSON.stringify(comments));
+  }
 
   form.addEventListener("submit", function (e) {
     e.preventDefault();
@@ -146,21 +224,17 @@
 
     if (!username || !movie || !commentText) return;
 
-    const commentDiv = document.createElement("div");
-    commentDiv.classList.add("comment");
+    displayComment(username, movie, commentText);
+    saveComment(username, movie, commentText);
 
-    commentDiv.innerHTML = `
-      <div class="header">${username} a comentat la <strong>${movie}</strong>:</div>
-      <p>${commentText}</p>
-    `;
-
-    commentList.prepend(commentDiv); // Comentariul apare sus
-    form.reset(); // Golește formularul
+    form.reset();
   });
+
+  // La încărcare pagină, încarcă comentariile salvate
+  loadComments();
 </script>
-
-
-    <!-- DESCRIERE -->
+  </section>
+    <section id="top-description">
     <section class="description-container" style="max-width: 900px; margin: 60px auto;">
       <h2>Despre MovieZ</h2>
       <p>
@@ -168,9 +242,11 @@
         Explorează cele mai noi lansări, notează-ți favoritele și conectează-te cu o comunitate pasionată de cinema.
       </p>
     </section>
+   
   </main>
-
+</section>
   <!-- FOOTER -->
+   <footer id="footer">
   <footer class="footer">
     <div class="footer-section about-us">
       <h4>Despre MovieZ</h4>
@@ -202,10 +278,7 @@
       <a href="#">📸</a>
     </div>
   </footer>
-
-  <!-- BACK TO TOP -->
-  <button id="back-to-top" style="display:none;">↑</button>
-
+</footer>
   <!-- SCRIPT -->
   <script>
     // Theme toggle
