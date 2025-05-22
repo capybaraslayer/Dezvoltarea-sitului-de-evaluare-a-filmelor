@@ -427,22 +427,16 @@ a:hover, a:focus {
 .footer {
   background-color: #181818;
   padding: 2rem 3rem;
-  display:
-
-
-
-
-
-
-ChatGPT a spus:
-flex;
-justify-content: space-between;
-color: #888;
-font-size: 0.9rem;
-flex-wrap: wrap;
-gap: 2rem;
+  display: flex;
 }
-
+.footer-info {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 2rem;
+  color: #888;
+  font-size: 0.9rem;
+}
 .footer-section {
 flex: 1 1 200px;
 }

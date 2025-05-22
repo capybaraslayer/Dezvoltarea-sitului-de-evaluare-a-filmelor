@@ -436,7 +436,7 @@
       movies.forEach(movie => container.appendChild(movie));
     }
 
-    sortSelect.addEventListener("change", () => {
+    sortSelect.addEventListener("change", () => {Pagina „Top 10 Filme” oferă o listă extinsă cu 30 de filme populare, fiecare prezentat într-un card dedicat ce conține o imagine reprezentativă, o scurtă descriere, ratingul în stele și un buton de descărcare a fișierului PDF cu rezumatul filmului. Utilizatorul poate sorta filmele în funcție de rating, în ordine crescătoare sau descrescătoare, folosind un dropdown ușor de utilizat.
       const sortOrder = sortSelect.value; // 'asc' sau 'desc'
       sortMovies(sortOrder);
       currentPage = 1; // Resetează pagina la 1 după sortare

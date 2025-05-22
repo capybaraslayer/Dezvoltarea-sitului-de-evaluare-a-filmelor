@@ -115,5 +115,39 @@
     });
 </script>
   <script src="../js/form-validation.js"></script>
+    <script>
+    const form = document.getElementById('registerForm');
+    const errorMsg = document.getElementById('errorMsg');
+
+    form.addEventListener('submit', function(e) {
+      e.preventDefault();
+
+      const email = document.getElementById('email').value.trim();
+      const password = document.getElementById('password').value.trim();
+
+      // Validare simplă
+      if (!email.includes('@')) {
+        errorMsg.textContent = "Emailul trebuie să conțină caracterul '@'.";
+        return;
+      }
+
+      if (password.length < 6) {
+        errorMsg.textContent = "Parola trebuie să aibă cel puțin 6 caractere.";
+        return;
+      }
+
+      // Salvare în localStorage
+      const user = {
+        email: email,
+        password: password // În realitate, parolele NU se salvează așa — se criptează!
+      };
+
+      localStorage.setItem('moviezUser', JSON.stringify(user));
+      alert("Înregistrare reușită! Vei fi redirecționat către pagina principală.");
+
+      // Redirecționare
+      window.location.href = "../index/index.html";
+    });
+  </script>
 </body>
 </html>
